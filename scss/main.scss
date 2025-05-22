@@ -76,7 +76,7 @@ main {
     }
 }
 
-// ABOUT PAGE
+// ABOUT PAGE (w/ Grid Template Areas)
 .about-info {
     display: grid;
     grid-gap: 30px;
@@ -116,7 +116,7 @@ main {
     }
 }
 
-// PROJECT PAGE
+// WORK PROJECTS PAGE (w/ Grid Template Columns)
 .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -130,6 +130,33 @@ main {
             opacity: 0.5;
             border: 3px solid $secondary-color;
             @include easeOut;
+        }
+    }
+}
+
+// CONTACT PAGE (w/ Flex)
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+
+    div {
+        font-size: 2rem;
+        border: 3px white solid;
+        padding: 1.5rem 2.5rem;
+        margin-bottom: 3rem;
+        @include easeOut;
+
+        &:hover {
+            padding: 1rem 2rem;
+            background: $secondary-color;
+            color: setTextColor($secondary-color);
+
+            span {
+                color: setTextColor($secondary-color);
+            }
         }
     }
 }
