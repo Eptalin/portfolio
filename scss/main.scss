@@ -28,8 +28,6 @@ h1, h2, h3 {
     &.sm-heading {
         margin-bottom: 2rem;
         padding: 0.2rem 1rem;
-        // Add transparent background lighter than primary color
-        background: rgba(lighten($primary-color, 2), 0.3);
     }
 }
 
@@ -62,7 +60,7 @@ main {
 
             &:hover {
                 color: $secondary-color;
-                @include easeOut()
+                @include easeOut;
             }
         }
     }
@@ -120,16 +118,78 @@ main {
 .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
     grid-gap: 0.7rem;
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
 
     img {
         width: 100%;
-        border: 3px solid white;
+        display: block;
 
         &:hover {
             opacity: 0.5;
-            border: 3px solid $secondary-color;
             @include easeOut;
+        }
+    }
+
+    .wrapper {
+        position: relative;
+        display: block;
+        border: 3px solid white;
+        padding: 0;
+        margin-bottom: 0.2rem;
+
+        &:hover {
+            border: 3px solid $secondary-color;
+
+            .icon-overlay {
+                display: block;
+                opacity: 1;
+            }
+        }
+        
+        .icon-overlay {
+          position: absolute;
+          display: block;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          opacity: 0;
+          font-size: 2rem;
+          color: white;
+          pointer-events: none;
+          font-size: 5rem;
+          @include easeOut;
+        }
+    }
+
+
+
+    p {
+        width: 100%;
+        border: 3px solid white;
+        background: darken($primary-color, 6);
+        padding: 0.5rem 1rem;
+        margin-bottom: 0.2rem;
+        margin-top: 0;
+        flex-grow: 1; 
+    }
+
+    .btn-light:hover {
+        cursor: auto;
+    }
+
+    .small {
+        font-size: .8rem;
+        padding: 0.1rem 1rem;
+        background: $secondary-color;
+        i {
+            font-size: 1rem;
         }
     }
 }
@@ -166,7 +226,7 @@ main {
     display: block;
     padding: 0.5rem 1rem;
     border: none;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.2rem;
 
     &:hover {
         background: $secondary-color;
@@ -189,11 +249,16 @@ main {
 
 // FOOTER
 #main-footer {
-    text-align: center;
+    text-align: end;
     padding: 1rem;
+    padding-right: 3rem;
     background: darken($primary-color, 10);
     color: setTextColor($primary-color);
     height: 60px;
+
+    span {
+        color: $secondary-color
+    }
 }
 
 // MEDIA QUERIES

@@ -1,0 +1,22 @@
+{
+  "name": "profile-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch --no-source-map scss:dist/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eptalin/portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eptalin/portfolio/issues"
+  },
+  "homepage": "https://github.com/Eptalin/portfolio#readme",
+  "dependencies": {
+    "sass": "^1.89.2"
+  }
+}
