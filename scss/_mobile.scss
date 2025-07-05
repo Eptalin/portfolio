@@ -1,0 +1,142 @@
+// DESKTOPS & LAPTOPS
+@media screen and (max-width: 1170px) {
+
+    
+    .projects {
+        .project {
+            padding: 2rem;
+            gap: 1rem;
+            max-width: 600px;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+            'img'
+            'info';
+
+            &.even {
+                grid-template-areas:
+                'img'
+                'info';
+            }
+
+            .project-info {
+                .description {
+                    font-size: 1.1rem;
+                }
+            }
+            
+        }
+    }
+}
+
+
+// TABLETS & SMALL LAPTOPS
+@media screen and (max-width: 815px) {
+
+    ul.menu-nav, 
+    div.menu-branding {
+        float: none;
+        width: 100%;
+        min-height: 0;
+
+        &.show {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .menu-nav {
+        height: 75vh;
+        transform: translate3d(-100%, 0, 0);
+        font-size: 24px;
+    }
+
+    .menu-branding {
+        height: 25vh;
+        transform: translate3d(100%, 0, 0);
+
+        .portrait {
+            background: url(../img/portrait-small.jpg);
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .home {
+        .sec-2 {
+            top: 30vh;
+            h1 {
+                font-size: 8rem;
+            }
+            h3 {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    .about-info {
+        grid-template-areas:
+        'bioimage'
+        'bio'
+        'job'
+        'job1'
+        'job2'
+        'job3'
+        'edu'
+        'edu1'
+        'edu2'
+        'edu3';
+        grid-template-columns: 1fr;
+
+        .item {
+            max-width: 100%;
+        }
+    }
+}
+
+
+// SMARTPHONES
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    .home {
+        .sec-2 {
+            top: 30vh;
+            h1 {
+                font-size: 6rem;
+            }
+            h3 {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .about-info {
+        padding: 2rem;
+        .bio {
+            font-size: 1.3rem;
+        }
+    }
+    
+    .projects {
+        h3 {
+            font-size: 1.3rem;
+        }
+
+        .project {
+            .project-info {
+                .links {
+                    a {
+                        &.youtube {
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

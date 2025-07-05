@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- Fonts are Awesome Icons -->  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" defer></script>
+
+    <title>My Projects</title>
+</head>
+<body class="font-inter">
+
+    <header>
+        <!-- 3-line menu icon -->
+        <div class="menu-btn">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
+        
+        <!-- Nav List -->
+        <nav class="menu">
+            <!-- Profile Pic -->
+            <div class="menu-branding">
+                <div class="portrait"></div>
+            </div>
+
+            <!-- Nav Links -->
+            <ul class="menu-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link current" href="projects.html">My Projects</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <ui-element>
+    <!-- Scroll Icon -->
+    <i class="fa fa-arrow-down"></i>    
+    </ui-element>
+
+    <main class="projects">
+        <div class="banner">
+        </div>
+        <h1 class="fade-in">My Projects</h1>
+        <h3 class="fade-in">Check out my journey as a CS student...</h3>
+        
+        <!-- Project 1 -->
+        <div class="project">
+            <img class="project-img fade-in" src="img/projects/project1.jpg" alt="Project 1 Image">
+            <div class="project-info fade-in">
+                <p class="tech fade-in"><i class="fa fa-code"></i> Python, HTML, CSS, Django</p>
+                <p class="description fade-in">This Django-based auction web app lets users create listings with titles, descriptions, starting bids, optional images, and categories.<br>
+                Users can view active listings, place bids with validation, comment, manage a personal watchlist, and close auctions they created.<br>
+                Listing, watchlist, and category pages help users browse and track items, while the admin interface allows full management of listings, bids, and comments.</p>
+                <div class="links fade-in">
+                    <a href="https://youtu.be/Qa3fdMvUs9w" class="youtube"><i class="fa fa-youtube-play"></i> Project Overview</a>
+                    <a href="https://github.com/Eptalin/Project-Commerce" class="github"><i class="fa fa-github"></i> On GitHub</a>
+                </div>
+            </div>
+        </div>
+            
+        <!-- Project 2 -->
+        <div class="project even">
+            <img class="project-img fade-in" src="img/projects/project2.jpg" alt="Project 1 Image">
+            <div class="project-info fade-in">
+                <p class="tech fade-in"><i class="fa fa-code"></i> SQL, ERD</p>
+                <p class="description fade-in">This SQLite database models players, games, characters, and tournament results for 1v1 fighting game events, with a normalized schema that enforces relationships through foreign keys.<br>
+                It supports tracking of each player's tournament appearances, character choices, and final placements, while accounting for different game mechanics and archetypes.<br>
+                Indexed fields optimize common search queries, enabling flexible analysis of performance trends by player, character, game, or archetype.</p>
+                <div class="links fade-in">
+                    <a href="https://youtu.be/WJC2k52m8rc" class="youtube"><i class="fa fa-youtube-play"></i> Project Overview</a>
+                    <a href="https://github.com/Eptalin/CS50-SQL-Final-Project" class="github"><i class="fa fa-github"></i> On GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project">
+            <img class="project-img fade-in" src="img/projects/project3.jpg" alt="Project 1 Image">
+            <div class="project-info fade-in">
+                <p class="tech fade-in"><i class="fa fa-code"></i> Regex, Python, Django, HTML, CSS</p>
+                <p class="description fade-in">This wiki encyclopedia web app lets users create, edit, search, and view entries written in Markdown, which I converted to HTML using my own regex-based parser instead of a library.<br>
+                Users can browse all entries, view specific ones by title, search for exact or partial matches, and create new entries with title validation.<br>
+                Each entry can be edited with pre-filled content, and a random page feature allows easy discovery.</p>
+                <div class="links fade-in">
+                    <a href="https://youtu.be/KSn8VKh9SFg" class="youtube"><i class="fa fa-youtube-play"></i> Project Overview</a>
+                    <a href="https://github.com/Eptalin/Project-Wiki" class="github"><i class="fa fa-github"></i> On GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project even">
+            <img class="project-img fade-in" src="img/projects/project4.jpg" alt="Project 1 Image">
+            <div class="project-info fade-in">
+                <p class="tech fade-in"><i class="fa fa-code"></i> Python, Flask, SQL, HTML, CSS</p>
+                <p class="description fade-in">This Flask app lets users track their ranked progress in fighting games through a dynamic, single-page interface built with SQL, JavaScript, and Plotly.<br>
+                Pages adapt to the selected game using AJAX requests, allowing seamless updates without full reloads.<br>
+                Ranking history is visualized with line charts that handle both numeric and non-numeric data, and all information is managed through a normalized, scalable database designed to support new games and characters with minimal code changes.</p>
+                <div class="links fade-in">
+                    <a href="https://youtu.be/1D2gxG_H5yk" class="youtube"><i class="fa fa-youtube-play"></i> Project Overview</a>
+                    <a href="https://github.com/Eptalin/CS50x-Final-Project" class="github"><i class="fa fa-github"></i> On GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project">
+            <img class="project-img fade-in" src="img/projects/project5.jpg" alt="Project 1 Image">
+            <div class="project-info fade-in">
+                <p class="tech fade-in"><i class="fa fa-code"></i> HTML, CSS</p>
+                <p class="description fade-in">This project recreates key Google search pages with a strong focus on mimicking Google's visual style using custom CSS.<br>
+                I used flexbox and grid layout strategically to center and align elements like the search bar, buttons, and forms, closely reflecting Google's structure.<br>
+                Rounded inputs, spacing, and color choices were carefully styled to match the original design, with consistent navigation links across pages reinforcing the overall layout.</p>
+                <div class="links fade-in">
+                    <a href="https://youtu.be/5DFCpBH-TWM" class="youtube"><i class="fa fa-youtube-play"></i> Project Overview</a>
+                    <a href="https://github.com/Eptalin/Project-Search" class="github"><i class="fa fa-github"></i> On GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project even">
+            <img class="project-img fade-in" src="img/projects/project6.jpg" alt="Project 1 Image">
+            <div class="project-info fade-in">
+                <p class="tech fade-in"><i class="fa fa-code"></i> JavaScript, Fetch API, Python, Django</p>
+                <p class="description fade-in">This single-page email client uses JavaScript, HTML, and CSS with all functionality contained in one JavaScript file.<br>
+                I leveraged fetch requests to interact with the backend for sending, retrieving, archiving, and replying to emails, enabling smooth view changes without page reloads.<br>
+                Dynamic DOM manipulation and event handling update mailbox contents, email views, and the compose form, while CSS controls layout and visibility for a responsive, seamless user experience.</p>
+                <div class="links fade-in">
+                    <a href="https://youtu.be/JSKXo4-EtFg" class="youtube"><i class="fa fa-youtube-play"></i> Project Overview</a>
+                    <a href="https://github.com/Eptalin/Project-Mail" class="github"><i class="fa fa-github"></i> On GitHub</a>
+                </div>
+            </div>
+        </div>
+        
+
+    </main>
+
+    <footer>
+        Darrell Kiely <span>&nbsp | &nbsp</span> Copyright &copy; 2025
+    </footer>
+    
+</body>
+</html>

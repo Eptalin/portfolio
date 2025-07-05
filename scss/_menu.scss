@@ -1,0 +1,132 @@
+// 3-Line Menu Button
+.menu-btn {
+    // Lock its position in the top right on the page
+    position: fixed;
+    top: 35px;
+    right: 35px;
+    // Keep it in front of everything else
+    z-index: 3;
+    // Set the cursor to a pointer
+    cursor: pointer;
+    padding: 15px 11px 10px 11px;
+    border-radius: 50%;
+    background: #FEFEFE;
+    @include easeOut;
+
+    // Decorate the 3 lines
+    .btn-line {
+        width: 28px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background: black;
+        @include easeOut;
+    }
+
+    // Rotate the 3 lines into an X
+    &.close {
+        transform: rotate(180deg);
+        background: none;
+        
+        .btn-line {
+            background: white;
+            // Line 1 - Rotate
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            // Line 2 - Hide
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            // Line 3 - Rotate
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+        }
+    }
+}
+
+// Menu Overlay
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    visibility: hidden;
+    z-index: 2;
+
+    &.show {
+        visibility: visible;
+    }
+
+    // Traits shared by both sides of the menu
+    &-branding,
+    &-nav {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        width: 50%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    // Left side of the menu (Profile pic)
+    &-branding {
+        background-color: rgba($primary-color, 0.9);
+        // Hide menu below the screen
+        transform: translate3d(0, 100%, 0);
+        @include easeOut;
+
+        &.show {
+            // Slide up from the bottom
+            transform: translate3d(0, 0, 0);
+        }
+
+        .portrait {
+            width: 250px;
+            height: 250px;
+            background: url(../img/portrait.jpg);
+            border-radius: 50%;
+            border: 4px solid $secondary-color;
+        }
+    }
+    
+    // Right side of the menu (Links)
+    &-nav {
+        margin: 0;
+        padding: 0;
+        background: rgba(darken($primary-color, 10), 0.9);
+        list-style: none;
+        // Hide menu above the screen
+        // Use translate3d to ask devices for more power
+        transform: translate3d(0, -100%, 0);
+        @include easeOut;
+
+        &.show {
+            // Slide down from the top
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .nav-link {
+        display: inline-block;
+        position: relative;
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        padding: 2rem 0;
+        text-decoration: none;
+        color: setTextColor($primary-color);
+        @include easeOut;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+
+    .current {
+        color: $secondary-color;
+        cursor: default;
+    }
+
+}

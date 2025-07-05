@@ -1,0 +1,14 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch --no-source-map scss:dist/css"
+  },
+  "author": "Darrell Kiely",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.89.2"
+  }
+}
